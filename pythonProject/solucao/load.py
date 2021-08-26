@@ -19,7 +19,6 @@ nav.get("https://www.google.com/")
 nav.find_element_by_xpath('/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input').send_keys(
     "cotação euro")
 nav.find_element_by_xpath('/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input').send_keys(Keys.ENTER)
-nav.implicitly_wait(4)
 cotacao_euro = nav.find_element_by_xpath(
     '//*[@id="knowledge-currency__updatable-data-column"]/div[1]/div[2]/span[1]').get_attribute('data-value')
 print(f"Euro Hoje: R$ %.2f" % float(cotacao_euro))
