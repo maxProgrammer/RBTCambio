@@ -56,3 +56,6 @@ tabela["Preço Base Reais"] = round(tabela["Preço Base Original"] * tabela["Cot
 tabela["Preço Final"] = round(tabela["Preço Base Reais"] * tabela["Margem"], 2)
 
 print(tabela)
+
+#exportar tabela atualizada
+tabela.to_excel("Produtos_Revisada.xlsx",index=False)
